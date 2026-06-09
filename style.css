@@ -10,9 +10,9 @@ body {
   background: #000;
   font-family: 'Space Grotesk', sans-serif;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-
 body::before {
   content: '';
   position: fixed;
@@ -50,9 +50,9 @@ h1 {
   font-family: 'Syne', sans-serif;
   font-size: 3.2rem;
   font-weight: 800;
-  color: #39ff14;
+  color: #00ffb7;
   letter-spacing: 0.04em;
-  text-shadow: 0 0 28px #39ff1455;
+  text-shadow: 0 0 28px #14c8ff55;
   line-height: 1.1;
 }
 
@@ -66,13 +66,72 @@ h2 {
 
 input {
   background: #ffffff;
-  border: 2px solid #39ff14;
+  border: 2px solid #14ffef;
   outline: none;
   padding: 0.85rem 1.1rem;
-  font-family: 'Space Grot
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.right{
-    width: 1100px;
-    height: 1100px;
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* SAVE BUTTON */
+#saveBtn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 2px solid #00ffb7;
+  color: #00ffb7;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#saveBtn:hover {
+  background: #00ffb7;
+  color: #000;
+}
+
+/* SAVED SECTION */
+.saved-section {
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+#savedContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.saved-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.saved-img:hover {
+  transform: scale(1.08);
 }

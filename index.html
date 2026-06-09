@@ -7,15 +7,26 @@
     <title>Album Cover Finder</title>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
     <div class="left">
       <h1>Album Cover Finder</h1>
       <h2>Write down the name of your song</h2>
-      <input type="text"/>
+
+      <input type="text" id="songInput" placeholder="Enter song..." />
+      <button onclick="searchSong()">Search</button>
     </div>
+
     <div class="right">
-      <img src="hello.png" alt="person"/>
+      <img id="cover" src="hello.png" alt="album cover"/>
+      <button id="saveBtn">Save</button>
     </div>
   </div>
+
+<div class="saved-section">
+  <h2>Saved</h2>
+  <div id="savedContainer"></div>
+</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
